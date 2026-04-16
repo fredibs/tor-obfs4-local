@@ -1,0 +1,28 @@
+# Data Directory
+DataDirectory /var/lib/tor
+
+# Configuração de CLIENTE (não relay/bridge)
+SocksPort 0.0.0.0:9050            # Escuta em todas interfaces DENTRO do container
+DNSPort 0.0.0.0:5353              # DNS sobre Tor (opcional)
+TransPort 0.0.0.0:9040            # Transparent proxy (opcional)
+
+# Log para Docker
+Log notice stdout
+SafeLogging 1
+
+# Informações
+Nickname TorLocalClient
+
+# Sem relay
+ExitPolicy reject *:*
+
+# Limite de banda (cliente)
+BandwidthRate 1 MB
+BandwidthBurst 2 MB
+
+# Para redes onion
+AutomapHostsOnResolve 1
+AutomapHostsSuffixes .onion,.exit
+
+# Segurança
+AvoidDiskWrites 1

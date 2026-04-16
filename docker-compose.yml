@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  tor:
+    build: .
+    container_name: tor-obfs4-local
+    restart: unless-stopped
+    
+    ports:
+      # Exposto APENAS na interface local da máquina (não público)
+      - "127.0.0.1:9050:9050"    # SOCKS - apenas localhost
+      #- "127.0.0.1:5353:5353/udp" # DNS (opcional)
+      # - "192.168.1.100:9050:9050" # Se quiser IP específico da rede interna
+    
+    volumes:
+      - tor-data:/var/lib/tor
+    
+    environment:
+      - TZ=America/Sao_Paulo
+
+volumes:
+  tor-data:
