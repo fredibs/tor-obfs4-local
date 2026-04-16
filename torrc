@@ -2,9 +2,9 @@
 DataDirectory /var/lib/tor
 
 # Configuração de CLIENTE (não relay/bridge)
-SocksPort 0.0.0.0:9050            # Escuta em todas interfaces DENTRO do container
-DNSPort 0.0.0.0:5353              # DNS sobre Tor (opcional)
-TransPort 0.0.0.0:9040            # Transparent proxy (opcional)
+SocksPort 0.0.0.0:9050             # Escuta em todas interfaces DENTRO do container
+DNSPort 0.0.0.0:5353               # DNS sobre Tor (opcional)
+TransPort 0.0.0.0:9040             # Transparent proxy (opcional)
 
 # Log para Docker
 Log notice stdout
