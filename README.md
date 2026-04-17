@@ -1,4 +1,4 @@
-# tor-server-local
+# tor-obfs4-local
 Container servidor  tor local
 
 Proxy SOCKS (uso geral)
