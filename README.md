@@ -12,3 +12,4 @@ Se você quer contribuir com a rede Tor rodando um middle relay ou uma bridge (�
 docker run -d --name tor-bridge -p 9001:9001 -p 9002:9002 thetorproject/obfs4-bridge:latest
 Comando de exemplo:
 A imagem thetorproject/obfs4-bridge é mantida oficialmente e já vem configurada para ser uma bridge, ajudando usuários em regiões com censura
+

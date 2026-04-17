@@ -38,3 +38,4 @@ RUN chown debian-tor:debian-tor /etc/tor/torrc
 USER debian-tor
 
 CMD ["tor", "-f", "/etc/tor/torrc"]
+
